@@ -124,7 +124,7 @@ export default function RegisterForm() {
         {isSubmitting ? "Criando conta..." : "Criar conta"}
       </Button>
 
-
+         <a href="/register" className="text-center">Possui conta? <strong>Faça o login</strong></a>
     </form>
   );
 }
