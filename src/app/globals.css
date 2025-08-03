@@ -1,2 +1,44 @@
 @import "tailwindcss";
 
+@layer utilities {
+  .text-glow-pulse {
+    animation: glowPulse 3s ease-in-out infinite;
+  }
+
+  @keyframes glowPulse {
+    0%, 100% {
+      color: #fff; /* cor inicial - laranja */
+      text-shadow:
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 40px #fff;
+    }
+    50% {
+      color: #00f7ff; /* cor no meio - azul claro */
+      text-shadow:
+        0 0 10px #00f7ff,
+        0 0 20px #00f7ff,
+        0 0 30px #00f7ff,
+        0 0 50px #00f7ff;
+    }
+  }
+}
+
+@layer utilities {
+  @keyframes lightTrail {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(200%);
+    }
+  }
+
+  .animate-light-trail {
+    animation: lightTrail 2s linear infinite;
+  }
+}
+
+
+

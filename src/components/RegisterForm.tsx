@@ -1,3 +1,6 @@
+
+
+//src/components/RegisterForm.tsx
 "use client";
 import Input from "@/components/Input";
 import Button from "@/components/Button";
@@ -51,7 +54,7 @@ export default function RegisterForm() {
 
       router.push("/thanks");
     } catch (err: any) {
-      setError("Erro ao criar conta. Tente outro email.");
+      setError("e-mail já cadastrado.");
       console.error(err);
     }
   };

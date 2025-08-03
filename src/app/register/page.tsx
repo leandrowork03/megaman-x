@@ -1,3 +1,4 @@
+//src/app/register/page.tsx
 import RegisterForm from "@/components/RegisterForm";
 import { IoHome } from "react-icons/io5";
 

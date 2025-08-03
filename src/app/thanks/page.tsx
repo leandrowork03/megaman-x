@@ -1,3 +1,4 @@
+//src/app/thanks/page.tsx
 "use client";
 
 import { useAuth } from "@/context/AuthContext";
@@ -79,7 +80,7 @@ export default function Thanks() {
             <div className="flex flex-col md:flex-row items-center gap-4 mt-6 justify-between">
               <div className="bg-blue-800/80 p-6 rounded-3xl flex flex-col items-center gap-4 shadow-xl border border-blue-500/40 max-w-sm">
                 <h1 className="font-extrabold text-xl text-blue-300 drop-shadow-md text-center">
-                  Música especial para você
+                  Dê o play na música tema desse projeto
                 </h1>
 
                 <button
@@ -145,3 +146,4 @@ export default function Thanks() {
     </PrivateRoute>
   );
 }
+

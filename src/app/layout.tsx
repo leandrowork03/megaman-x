@@ -1,13 +1,15 @@
 // src/app/layout.tsx
-import { AuthProvider } from "../context/AuthContext";
 import './globals.css'
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+import { AuthProvider } from '../context/AuthContext'
+import { LayoutWrapper } from '@/components/LayoutWrapper'
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR">
       <body>
-        <AuthProvider>{children}</AuthProvider>
+        <AuthProvider>
+          <LayoutWrapper>{children}</LayoutWrapper>
+        </AuthProvider>
       </body>
     </html>
-  );
+  )
 }

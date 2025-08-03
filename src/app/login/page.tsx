@@ -1,3 +1,4 @@
+//src/app/page.tsx
 import LoginForm from "@/components/LoginForm";
 import { IoHome } from "react-icons/io5";
 
@@ -11,3 +12,4 @@ export default function LoginPage() {
     </main>
   );
 }
+

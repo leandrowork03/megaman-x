@@ -12,3 +12,4 @@ export default function Button({ children, ...rest }: ButtonProps) {
     </button>
   );
 }
+
