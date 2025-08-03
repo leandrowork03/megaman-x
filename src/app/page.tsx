@@ -22,13 +22,15 @@ export default function Home() {
   const [ref1, inView1] = useInView({ triggerOnce: false, threshold: 0.3 })
   const [ref2, inView2] = useInView({ triggerOnce: false, threshold: 0.3 })
   const [ref3, inView3] = useInView({ triggerOnce: false, threshold: 0.3 })
-  const [ref4, inView4] = useInView({ triggerOnce: false, threshold: 0.3 })
+  const [ref4, inView4] = useInView({ triggerOnce: false, threshold: 0.3 }) // Não utilizado, mas mantido
 
+  
   const [footerRef, footerInView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
-  const linkedinUrl = "https://www.linkedin.com/in/leandro-santos-front-end/";
+  
+  const linkedinUrl = "linkedin.com/in/leandro-santos-front-end/";
   const whatsappNumber = "5551982126888";
-  const emailAddress = "leandrotrabalho03@gmail.com";
+  const emailAddress = "leandrotrabalho03@example.com"; 
 
   useEffect(() => {
     const video = videoRef.current
@@ -133,13 +135,16 @@ export default function Home() {
             transition={{ duration: 1, ease: "easeOut" }}
             className="container mx-auto px-4 py-10"
           >
+
+
             <a href="/game">
               <div className="flex flex-col lg:flex-row bg-black/90 p-6 gap-6 rounded-xl">
+                {/* Use Image component for Next.js optimization */}
                 <Image
                   src="/images/game.jpg"
-                  alt="X e Zero em combate"
-                  width={400}
-                  height={300}
+                  alt="X e Zero em combate" // Adicione um alt descritivo
+                  width={400} // Defina width e height
+                  height={300} // Proporções aproximadas, ajuste conforme a imagem real
                   className="w-full max-w-xs md:max-w-sm lg:max-w-md object-contain"
                 />
                 <div>
@@ -162,11 +167,12 @@ export default function Home() {
           >
             <a href="/register">
               <div className="flex flex-col lg:flex-row bg-black/90 p-6 gap-6 rounded-xl">
+                {/* Use Image component for Next.js optimization */}
                 <Image
                   src="/images/login.jpg"
-                  alt="Mega Man X na tela de login"
-                  width={250}
-                  height={250}
+                  alt="Mega Man X na tela de login" // Adicione um alt descritivo
+                  width={250} // Defina width e height
+                  height={250} // Proporções aproximadas, ajuste conforme a imagem real
                   className="w-[100px] md:w-[150px] lg:w-[250px] object-contain"
                 />
                 <div>
@@ -188,11 +194,12 @@ export default function Home() {
           >
             <a href="/historia">
               <div className="flex flex-col lg:flex-row bg-black/90 p-6 gap-6 rounded-xl">
+                {/* Use Image component for Next.js optimization */}
                 <Image
                   src="/images/mgzr.jpg"
-                  alt="Zero pronto para o ataque"
-                  width={400}
-                  height={250}
+                  alt="Zero pronto para o ataque" // Adicione um alt descritivo
+                  width={400} // Defina width e height
+                  height={250} // Proporções aproximadas, ajuste conforme a imagem real
                   className="w-[100px] md:w-[200px] lg:w-[400px] object-contain"
                 />
                 <div>
@@ -212,7 +219,7 @@ export default function Home() {
           <div className="bg-gradient-to-br from-gray-800 to-black border-4 border-blue-600 rounded-lg p-6 shadow-xl-blue text-center relative max-w-sm w-full animate-scale-in">
             <Image
               src="/images/x-pixel.png"
-              alt="Mega Man X Pixel"
+              alt="Mega Man X Pixel" // Correção aqui: adicionei alt
               width={80}
               height={80}
               className="mx-auto mb-4 border-2"
@@ -221,7 +228,7 @@ export default function Home() {
               Bem-vindo, Maverick Hunter!
             </h3>
             <p className="text-lg text-gray-200 mb-6">
-              Para uma experiência completa, que tal fazer se cadastrar agora ou fazer o login?
+              Para uma experiência completa, que tal se cadastrar agora ou fazer o login?
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <button
@@ -288,7 +295,7 @@ export default function Home() {
               </h3>
               <ul className="space-y-2">
                 <li>
-                  <a href={`mailto:${emailAddress}`} className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-shadow-hover-blue flex items-center justify-center md:justify-start gap-2">
+                  <a href={`mailto:leandrotrabalho03@gmail.com`} className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-shadow-hover-blue flex items-center justify-center md:justify-start gap-2">
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
                     {emailAddress}
                   </a>
@@ -299,8 +306,9 @@ export default function Home() {
                     GitHub
                   </a>
                 </li>
+               
                 <li>
-                  <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-shadow-hover-blue flex items-center justify-center md:justify-start gap-2">
+                  <a href="linkedin.com/in/leandro-santos-front-end/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-shadow-hover-blue flex items-center justify-center md:justify-start gap-2">
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path fillRule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clipRule="evenodd" />
                     </svg>
@@ -308,9 +316,9 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
-                  <a href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-shadow-hover-blue flex items-center justify-center md:justify-start gap-2">
+                  <a href={`https://wa.me/51982126888`} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-shadow-hover-blue flex items-center justify-center md:justify-start gap-2">
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M.057 24L1.75 17.25C.7 15.6.2 13.65.2 11.6C.2 5.2 5.4 0 11.8 0c3.25 0 6.3 1.3 8.6 3.6 2.3 2.3 3.6 5.3 3.6 8.6 0 6.4-5.2 11.6-11.6 11.6-2.05 0-4-.5-5.65-1.5L.057 24zm6.6-4.9c.45.6 1.1.9 1.8 1.1.7.2 1.4.3 2.1.3 5.4 0 9.8-4.4 9.8-9.8S17.2 2.2 11.8 2.2 2 6.6 2 12c0 1.9.5 3.7 1.4 5.2l-.7 2.7 2.7-.7zM17.4 14.8c-.2-.1-.9-.5-.9-1.1s.3-.7.4-1c.1-.2.2-.5.3-.6.1-.2.2-.4.4-.5.2-.2.4-.2.6-.2.2 0 .4.1.6.2.2.1.9.4 1.1 1.1s.2 1.3-.1 1.7c-.2.4-.5.4-.7.5-.2.1-.4.2-.6.2-.2 0-.4-.1-.6-.2-.2-.1-.9-.5-.9-1.1zM11.8 4.2c-4.2 0-7.6 3.4-7.6 7.6 0 1.5.4 2.9 1.1 4.2l-.6 2.4 2.4-.6c1.2.7 2.6 1.1 4.1 1.1 4.2 0 7.6-3.4 7.6-7.6s-3.4-7.6-7.6-7.6zM17.4 14.8c-.2-.1-.9-.5-.9-1.1s.3-.7.4-1c.1-.2.2-.5.3-.6.1-.2.2-.4.4-.5.2-.2.4-.2.6-.2.2 0 .4.1.6.2.2.1.9.4 1.1 1.1s.2 1.3-.1 1.7c-.2.4-.5.4-.7.5-.2.1-.4.2-.6.2-.2 0-.4-.1-.6-.2-.2-.1-.9-.5-.9-1.1zM11.8 4.2c-4.2 0-7.6 3.4-7.6 7.6 0 1.5.4 2.9 1.1 4.2l-.6 2.4 2.4-.6c1.2.7 2.6 1.1 4.1 1.1 4.2 0 7.6-3.4 7.6-7.6s-3.4-7.6-7.6-7.6zM17.4 14.8c-.2-.1-.9-.5-.9-1.1s.3-.7.4-1c.1-.2.2-.5.3-.6.1-.2.2-.4.4-.5.2-.2.4-.2.6-.2.2 0 .4.1.6.2.2.1.9.4 1.1 1.1s.2 1.3-.1 1.7c-.2.4-.5.4-.7.5-.2.1-.4.2-.6.2-.2 0-.4-.1-.6-.2-.2-.1-.9-.5-.9-1.1zM11.8 4.2c-4.2 0-7.6 3.4-7.6 7.6 0 1.5.4 2.9 1.1 4.2l-.6 2.4 2.4-.6c1.2.7 2.6 1.1 4.1 1.1 4.2 0 7.6-3.4 7.6-7.6s-3.4-7.6-7.6-7.6z" />
+                      <path d="M.057 24L1.75 17.25C.7 15.6.2 13.65.2 11.6C.2 5.2 5.4 0 11.8 0c3.25 0 6.3 1.3 8.6 3.6 2.3 2.3 3.6 5.3 3.6 8.6 0 6.4-5.2 11.6-11.6 11.6-2.05 0-4-.5-5.65-1.5L.057 24zm6.6-4.9c.45.6 1.1.9 1.8 1.1.7.2 1.4.3 2.1.3 5.4 0 9.8-4.4 9.8-9.8S17.2 2.2 11.8 2.2 2 6.6 2 12c0 1.9.5 3.7 1.4 5.2l-.7 2.7 2.7-.7zM17.4 14.8c-.2-.1-.9-.5-.9-1.1s.3-.7.4-1c.1-.2.2-.5.3-.6.1-.2.2-.4.4-.5.2-.2.4-.2.6-.2.2 0 .4.1.6.2.2.1.9.4 1.1 1.1s.2 1.3-.1 1.7c-.2.4-.5.4-.7.5-.2.1-.4.2-.6.2-.2 0-.4-.1-.6-.2-.2-.1-.9-.5-.9-1.1zM11.8 4.2c-4.2 0-7.6 3.4-7.6 7.6 0 1.5.4 2.9 1.1 4.2l-.6 2.4 2.4-.6c1.2.7 2.6 1.1 4.1 1.1 4.2 0 7.6-3.4 7.6-7.6s-3.4-7.6-7.6-7.6zM17.4 14.8c-.2-.1-.9-.5-.9-1.1s.3-.7.4-1c.1-.2.2-.5.3-.6.1-.2.2-.4.4-.5.2-.2.4-.2.6-.2.2 0 .4.1.6.2.2.1.9.4 1.1 1.1s.2 1.3-.1 1.7c-.2.4-.5.4-.7.5-.2.1-.4.2-.6.2-.2 0-.4-.1-.6-.2-.2-.1-.9-.5-.9-1.1zM11.8 4.2c-4.2 0-7.6 3.4-7.6 7.6 0 1.5.4 2.9 1.1 4.2l-.6 2.4 2.4-.6c1.2.7 2.6 1.1 4.1 1.1 4.2 0 7.6-3.4 7.6-7.6s-3.4-7.6-7.6-7.6zM17.4 14.8c-.2-.1-.9-.5-.9-1.1s.3-.7.4-1c.1-.2.2-.5.3-.6.1-.2.2-.4.4-.5.2-.2.4-.2.6-.2.2 0 .4.1.6.2.2.1.9.4 1.1 1.1s.2 1.3-.1 1.7c-.2.4-.5.4-.7.5-.2.1-.4.2-.6.2-.2 0-.4-.1-.6-.2-.2-.1-.9-.5-.9-1.1zM11.8 4.2c-4.2 0-7.6 3.4-7.6 7.6 0 1.5.4 2.9 1.1 4.2l-.6 2.4 2.4-.6c1.2.7 2.6 1.1 4.1 1.1 4.2 0 7.6-3.4 7.6-7.6s-3.4-7.6-7.6-7.6z"/>
                     </svg>
                     WhatsApp
                   </a>
