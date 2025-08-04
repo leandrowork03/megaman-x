@@ -55,25 +55,30 @@ export default function Thanks() {
         Seu navegador não suporta áudio.
       </audio>
 
-      <div className="relative flex items-center justify-center h-screen px-4">
+      {/* Removido `h-screen` para permitir que o conteúdo defina a altura total. 
+          `min-h-screen` garante altura mínima e `py-8` adiciona padding vertical. */}
+      <div className="relative flex items-center justify-center min-h-screen py-8 px-4">
         <div
-          className="max-w-4xl flex flex-col md:flex-row bg-black/70 text-white p-6 md:p-10 rounded-4xl justify-center items-center gap-6 md:gap-10 z-10 relative"
+          // `p-4` para mobile, `md:p-10` para desktop.
+          className="max-w-4xl flex flex-col md:flex-row bg-black/70 text-white p-4 md:p-10 rounded-4xl justify-center items-center gap-6 md:gap-10 z-10 relative"
         >
           {/* Bordas animadas aqui */}
           <div className="absolute -inset-1 rounded-4xl border-4 border-transparent pointer-events-none animated-border z-[-1]" />
 
-          <div className="max-w-md text-center md:text-left">
+          {/* `w-full` em mobile, `sm:max-w-md` a partir de `sm` para controlar largura. */}
+          <div className="w-full sm:max-w-md text-center md:text-left">
             <h1 className="text-xl md:text-2xl font-bold mb-4">
-              <strong className="text-4xl md:text-6xl">{capitalizedDisplayName}</strong> Muito obrigado pela visita!
+              {/* Ajuste fino do tamanho do nome para `text-4xl` em mobile, `sm:text-5xl` em sm e `md:text-6xl` em md */}
+              <strong className="text-4xl sm:text-5xl md:text-6xl">{capitalizedDisplayName}</strong> Muito obrigado pela visita!
             </h1>
-            <p className="text-base md:text-lg leading-relaxed mb-4">
+            <p className="text-base leading-relaxed mb-4 md:text-lg">
               Eu realmente fico feliz que você tenha vindo até aqui.
               Sua visita significa muito para mim, e espero que encontre aqui inspiração, aprendizado e boas experiências.
               Sempre que precisar, este espaço estará aberto para você voltar, explorar e crescer junto comigo.
               Valeu de coração!
             </p>
 
-            <p className="italic text-yellow-400 text-sm md:text-base mt-4">
+            <p className="italic text-yellow-400 text-sm mt-4 md:text-base">
               “Mesmo quando o mundo diz que é impossível, lute como um Maverick Hunter: nunca desista dos seus sonhos.”
             </p>
 
@@ -116,7 +121,7 @@ export default function Thanks() {
           <img
             src="/images/me.jpeg"
             alt="eu"
-            className="w-40 h-auto sm:w-52 sm:h-72 md:w-80 md:h-auto rounded-4xl object-cover"
+            className="w-40 h-auto sm:w-52 sm:h-72 md:w-80 md:h-auto rounded-4xl object-cover hidden md:block"
           />
         </div>
       </div>
@@ -146,4 +151,3 @@ export default function Thanks() {
     </PrivateRoute>
   );
 }
-
