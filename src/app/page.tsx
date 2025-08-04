@@ -139,12 +139,12 @@ export default function Home() {
 
             <a href="/game">
               <div className="flex flex-col lg:flex-row bg-black/90 p-6 gap-6 rounded-xl">
-                {/* Use Image component for Next.js optimization */}
+                
                 <Image
                   src="/images/game.jpg"
-                  alt="X e Zero em combate" // Adicione um alt descritivo
-                  width={400} // Defina width e height
-                  height={300} // Proporções aproximadas, ajuste conforme a imagem real
+                  alt="X e Zero em combate" 
+                  width={400}
+                  height={300}
                   className="w-full max-w-xs md:max-w-sm lg:max-w-md object-contain"
                 />
                 <div>
@@ -167,13 +167,12 @@ export default function Home() {
           >
             <a href="/register">
               <div className="flex flex-col lg:flex-row bg-black/90 p-6 gap-6 rounded-xl">
-                {/* Use Image component for Next.js optimization */}
                 <Image
                   src="/images/login.jpg"
-                  alt="Mega Man X na tela de login" // Adicione um alt descritivo
-                  width={250} // Defina width e height
-                  height={250} // Proporções aproximadas, ajuste conforme a imagem real
-                  className="w-[100px] md:w-[150px] lg:w-[250px] object-contain"
+                  alt="Mega Man X na tela de login" 
+                   width={400}
+                  height={300}
+                  className="w-full max-w-xs md:max-w-sm lg:max-w-md object-contain"
                 />
                 <div>
                   <h2 className="text-2xl pb-4">Faça já o seu registro</h2>
@@ -194,13 +193,13 @@ export default function Home() {
           >
             <a href="/historia">
               <div className="flex flex-col lg:flex-row bg-black/90 p-6 gap-6 rounded-xl">
-                {/* Use Image component for Next.js optimization */}
+               
                 <Image
                   src="/images/mgzr.jpg"
-                  alt="Zero pronto para o ataque" // Adicione um alt descritivo
-                  width={400} // Defina width e height
-                  height={250} // Proporções aproximadas, ajuste conforme a imagem real
-                  className="w-[100px] md:w-[200px] lg:w-[400px] object-contain"
+                  alt="Zero pronto para o ataque" 
+                  width={400}
+                  height={300}
+                  className="w-full max-w-xs md:max-w-sm lg:max-w-md object-contain"
                 />
                 <div>
                   <h2 className="text-2xl pb-4">Veja a história</h2>
@@ -219,7 +218,7 @@ export default function Home() {
           <div className="bg-gradient-to-br from-gray-800 to-black border-4 border-blue-600 rounded-lg p-6 shadow-xl-blue text-center relative max-w-sm w-full animate-scale-in">
             <Image
               src="/images/x-pixel.png"
-              alt="Mega Man X Pixel" // Correção aqui: adicionei alt
+              alt="Mega Man X Pixel" 
               width={80}
               height={80}
               className="mx-auto mb-4 border-2"
