@@ -30,7 +30,7 @@ export default function Home() {
   
   const linkedinUrl = "linkedin.com/in/leandro-santos-front-end/";
   const whatsappNumber = "5551982126888";
-  const emailAddress = "leandrotrabalho03@example.com"; 
+  const emailAddress = "leandrotrabalho03@gmail.com"; 
 
   useEffect(() => {
     const video = videoRef.current
